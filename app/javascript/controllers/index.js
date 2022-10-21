@@ -4,6 +4,9 @@
 
 import { application } from "./application"
 
+import ScrollingController from "./scrolling_controller"
+application.register('scrolling', ScrollingController)
+
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 

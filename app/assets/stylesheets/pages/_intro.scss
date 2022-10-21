@@ -2,12 +2,60 @@ body {
 	font-family: Arial;
 	color: #333;
 }
+// #mappers-bg{
+//   background-image: url(blueGlobeWorked.png);
+//   background-size: contain;
+//   background-repeat: no-repeat;
+//   background-position: 10%;
+
+// }
+.horizontal-line{
+  width: 101%;
+  height: 20px;
+  background-color: black;
+}
+.black-line-vertical{
+  margin: 0;
+  width: 20px;
+  height: 500px;
+  background-color: black;
+}
+#mappers-bg::after {
+  content: '';
+  width: 20px;
+  height: 446.4px;
+  background-color: black;
+  bottom: 1141.3px;
+  position: absolute;
+  // z-index: -1;
+  // transform: scaleX(1);
+  left: 2.25rem;
+  right: 1.25rem;
+  // transition-delay: .6s;
+}
+#mappers-bg::before {
+  content: '';
+  width: 20px;
+  height: 446.4px;
+  background-color: black;
+  bottom: 1141.3px;
+  position: absolute;
+  // z-index: -1;
+  transform: scaleY(0);
+  right: 1.25rem;
+  transition-delay: .6s;
+}
+
+
+
+
+
 h1 {
   font-family: Emerland;
   color: aliceblue;
   font-size: 55px;
 }
-#intro-title{
+.intro-title{
   color: #333;
   font-size: 75px;
   text-decoration: underline;
@@ -34,6 +82,7 @@ h1 {
 
 ul,
 li {
+
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
@@ -98,6 +147,16 @@ li {
 
 
 .background{
-  height: 100vh;
+  position: relative;
+  height: 100%;
   background: linear-gradient(0deg, #FF8360 0%, #FEA581 100%);
+  padding: 50px;
+}
+.intro-card-color{
+  background-color: #F76E11;
+}
+.intro-card-size{
+  border-radius: 25px;
+  width: 40%;
+  padding:25px;
 }
