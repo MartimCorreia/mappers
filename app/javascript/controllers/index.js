@@ -4,11 +4,14 @@
 
 import { application } from "./application"
 
-import ScrollingController from "./scrolling_controller"
-application.register('scrolling', ScrollingController)
+import FadeinController from "./fadein_controller"
+application.register("fadein", FadeinController)
 
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 
-import FadeinController from "./fadein_controller"
-application.register("fadein", FadeinController)
+import MapController from "./map_controller"
+application.register("map", MapController)
+
+import ScrollingController from "./scrolling_controller"
+application.register("scrolling", ScrollingController)

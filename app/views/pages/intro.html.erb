@@ -59,9 +59,13 @@
     <div class="row justify-content-end">
       <div class="intro-card-color intro-card-size">
         <%=link_to "SignIn", user_session_path%>
+        <%if current_user  %>
+        <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
+        <% else  %>
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.<br>
         Magni porro recusandae illum maxime velit, eveniet, eligendi iusto sit saepe deleniti modi voluptatibus cumque.<br>
         Fuga exercitationem ullam laudantium, magnam quae hic!</p>
+        <% end  %>
       </div>
     </div>
   </div>
