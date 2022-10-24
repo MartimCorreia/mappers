@@ -13,6 +13,12 @@ body {
   width: 101%;
   height: 20px;
   background-color: black;
+  transition-delay: .6s;
+  transform: scaleX(0);
+  transition: 1s;
+}
+.loaded-h{
+  transform: scaleX(1);
 }
 .black-line-vertical{
   margin: 0;
@@ -25,26 +31,36 @@ body {
   width: 20px;
   height: 446.4px;
   background-color: black;
-  bottom: 1141.3px;
+  bottom: 1119.1px;
   position: absolute;
   // z-index: -1;
-  // transform: scaleX(1);
+  transform: scaleY(0);
   left: 2.25rem;
   right: 1.25rem;
-  // transition-delay: .6s;
+  transition-delay: .6s;
+  transition: 1s;
 }
 #mappers-bg::before {
   content: '';
   width: 20px;
   height: 446.4px;
   background-color: black;
-  bottom: 1141.3px;
+  bottom: 1119.1px;
   position: absolute;
   // z-index: -1;
   transform: scaleY(0);
   right: 1.25rem;
   transition-delay: .6s;
+  transition: 1s;
 }
+#mappers-bg::before.loaded {
+  transform: scaleY(1);
+}
+#mappers-bg::after.loaded{
+  transform: scaleY(1);
+}
+
+
 
 
 
@@ -151,6 +167,7 @@ li {
   height: 100%;
   background: linear-gradient(0deg, #FF8360 0%, #FEA581 100%);
   padding: 50px;
+
 }
 .intro-card-color{
   background-color: #F76E11;

@@ -3,11 +3,12 @@ import { Controller } from "@hotwired/stimulus"
 export default class extends Controller {
   connect() {
     window.addEventListener('load', () => {
-      const stuff = document.querySelector('#mappers-bg::before');
-      console.log(stuff);
+      document.getElementById('mappers-bg').className += " loaded";
+      const horizontalLines = document.querySelectorAll('.horizontal-line');
+      horizontalLines.forEach(line => {
+        line.className += " loaded-h";
+      })
     });
+
   }
-
-
-
 }
