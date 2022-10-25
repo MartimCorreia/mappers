@@ -38,3 +38,13 @@
   color: black;
   z-index: 3;
 }
+.user-panel a{
+  position: absolute;
+  top: 13px;
+  right: 18px;
+  color: black;
+  transition: 0.5s;
+}
+.user-panel a:hover{
+  color: azure;
+}

@@ -4,6 +4,10 @@
       <div class="col-3">
        <div class="user-panel m-3">
         <%= image_tag "cloudsPlaceHolder.jpg", :style => "height: 15%; width: 100%; border-radius: 25px 25px 0 0;" %>
+        <%= link_to edit_user_registration_path do %>
+          <%= icon('fa-solid', 'pen') %>
+        <% end %>
+
         <%= image_tag "userPlaceholder.png", class:"avatar-dash", :style => "width: 100px; border: 2px solid white; border-radius: 50%;" %>
         <div class="user-name d-flex align-items-center justify-content-center">
           <h4> <strong>Martim Correia</strong></h4>
