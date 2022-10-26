@@ -1,5 +1,5 @@
 import { Controller } from "@hotwired/stimulus"
-import { saveAs } from 'file-saver';
+
 
 // Connects to data-controller="map"
 export default class extends Controller {
@@ -28,19 +28,18 @@ export default class extends Controller {
     );
 
       this.map.on('click', (e) => {
-
         const marker = new mapboxgl.Marker({
-
           color: "#F76E11",
           draggable: true
         }).setLngLat([JSON.stringify(e.lngLat.wrap().lng), JSON.stringify(e.lngLat.wrap().lat)]).addTo(this.map);
-
-        // console.log(JSON.stringify(e.lngLat.wrap().lng));
-        // const FileSaver = require('file-saver');
-        // let blob = new Blob(JSON.stringify(e.lngLat.wrap()), {type: "text/plain;charset=utf-8"});
-        // FileSaver.saveAs(blob, "hello world.txt");
+         console.log(marker);
       });
 
 
+
     }
+    // post(e) {
+    //   fetch(e.)
+    // }
+
   }

@@ -12,6 +12,6 @@ Rails.application.routes.draw do
     root to: "pages#dashboard", as: :authenticated_root
   end
 
-  
+  resources :locations, only: [:create]
 
 end
